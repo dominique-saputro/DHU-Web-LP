@@ -1,11 +1,661 @@
-header #dhu_logo img {
-  color: black;
-  height: 300px;
-  width: 600px;
+@-webkit-keyframes hoverAnim {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
-header img {
-  height: 300px;
+@keyframes hoverAnim {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@-webkit-keyframes mouse-outAnim {
+  from {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes mouse-outAnim {
+  from {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  header h1 {
+    text-align: left;
+  }
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html ::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  height: 100vh;
+  padding: 3vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .kv {
+  background-image: url("../images/kv.jpeg");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+header .dhuLogo {
+  fill: white;
+}
+
+header h1 {
+  color: white;
+  font-size: 2rem;
+  text-align: right;
+  margin-top: 330px;
+}
+
+header h2 {
+  color: white;
+  font-size: 1.5rem;
+  text-align: right;
+  margin-top: 30px;
+}
+
+header p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  float: right;
+  width: 50vw;
+  margin-top: 30px;
+}
+
+header .scroll {
+  font-size: 0.8rem;
+  margin-top: 8vh;
+  text-align: center;
+  width: 90vw;
+}
+
+main h3 {
+  font-size: 2rem;
+  margin-top: 150px;
+  color: #333;
+  text-align: center;
+}
+
+main h4 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #333;
+  text-align: center;
+}
+
+main h5 {
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+main p {
+  line-height: 1.5;
+}
+
+#courses {
+  width: 100vw;
+}
+
+#courses li {
+  margin-top: 70px;
+}
+
+#courses .image-container {
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60vw;
+  height: 600px;
+  z-index: 0;
+  position: relative;
+}
+
+#courses .text-container {
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
   width: 600px;
+  height: 380px;
+  z-index: 1;
+  position: relative;
+  background-color: white;
+  padding: 90px 70px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#courses #course-first .image-container {
+  background-image: url("../images/classes_prototyping.jpeg");
+}
+
+#courses #course-first .text-container {
+  top: -300px;
+  left: 40vw;
+}
+
+#courses #course-second .image-container {
+  background-image: url("../images/classes_development.jpeg");
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  left: 40vw;
+}
+
+#courses #course-second .text-container {
+  top: -650px;
+  left: 20vw;
+}
+
+#courses #course-third .image-container {
+  background-image: url("../images/classes_seminar.jpeg");
+}
+
+#courses #course-third .text-container {
+  top: -700px;
+  left: 40vw;
+}
+
+#compare .image-container {
+  width: 50vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  background-image: url(../images/web_designer.jpeg);
+}
+
+#compare .text-container {
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  width: 50vw;
+  padding: 20vh 100px;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#compare .text-container p {
+  line-height: 1.5;
+  margin-top: 80px;
+}
+
+#compare #web-designer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 70px;
+}
+
+#compare #web-designer-container .image-container {
+  background-image: url(../images/web_designer.jpeg);
+}
+
+#compare #web-programmer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#compare #web-programmer-container .image-container {
+  background-image: url(../images/web_programmer.jpeg);
+}
+
+#merit .merit-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0 7.5vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 70px;
+}
+
+#merit .merit-container img {
+  width: 90%;
+  height: 100%;
+}
+
+#merit .merit-container #merit-first {
+  -webkit-animation-name: mouse-outAnim;
+          animation-name: mouse-outAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+#merit .merit-container #merit-first:hover {
+  cursor: pointer;
+  -webkit-animation-name: hoverAnim;
+          animation-name: hoverAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#merit .merit-container #merit-second {
+  -webkit-animation-name: mouse-outAnim;
+          animation-name: mouse-outAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+#merit .merit-container #merit-second:hover {
+  cursor: pointer;
+  -webkit-animation-name: hoverAnim;
+          animation-name: hoverAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#merit .merit-container #merit-third {
+  -webkit-animation-name: mouse-outAnim;
+          animation-name: mouse-outAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+#merit .merit-container #merit-third:hover {
+  cursor: pointer;
+  -webkit-animation-name: hoverAnim;
+          animation-name: hoverAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#merit .merit-container #merit-fourth {
+  -webkit-animation-name: mouse-outAnim;
+          animation-name: mouse-outAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+#merit .merit-container #merit-fourth:hover {
+  cursor: pointer;
+  -webkit-animation-name: hoverAnim;
+          animation-name: hoverAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#merit .merit-container #merit-fifth {
+  -webkit-animation-name: mouse-outAnim;
+          animation-name: mouse-outAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+#merit .merit-container #merit-fifth:hover {
+  cursor: pointer;
+  -webkit-animation-name: hoverAnim;
+          animation-name: hoverAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#personal .personal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  width: 80vw;
+  height: 80vh;
+  margin-left: 10vw;
+  margin-top: 70px;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+}
+
+#personal .personal-container .image-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px 0 0 25px;
+  width: 40vw;
+}
+
+#personal .personal-container .text-container {
+  padding: 20vh 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 40vw;
+}
+
+#personal #personal-first .image-container {
+  background-image: url(../images/classes_prototyping.jpeg);
+}
+
+#personal #personal-second .image-container {
+  background-image: url(../images/classes_development.jpeg);
+}
+
+#personal #personal-third .image-container {
+  background-image: url(../images/classes_seminar.jpeg);
+}
+
+#teachers #teacher-container {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#teachers .teacher {
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  width: 25vw;
+  height: 90vh;
+  text-align: center;
+}
+
+#teachers .teacher img {
+  width: 25vw;
+}
+
+#teachers .teacher .text-container {
+  padding: 3vh 5vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#projects .project-grid {
+  width: 80vw;
+  margin-left: 10vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+      grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+  -ms-grid-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+      grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+#projects .project-container {
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation-name: mouse-outAnim;
+          animation-name: mouse-outAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  margin-top: 70px;
+}
+
+#projects .project-container:hover {
+  cursor: pointer;
+  -webkit-animation-name: hoverAnim;
+          animation-name: hoverAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#projects #project-first {
+  background-image: url(../images/web_gallery_dementia.jpeg);
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: 2 / 1 / 5 / 5;
+  z-index: 2;
+}
+
+#projects #project-first:hover {
+  z-index: 3;
+}
+
+#projects #project-second {
+  background-image: url(../images/web_gallery_focammina.jpeg);
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-area: 7 / 2 / 11 / 6;
+  z-index: 2;
+}
+
+#projects #project-second:hover {
+  z-index: 3;
+}
+
+#projects #project-third {
+  background-image: url(../images/web_gallery_allertech.jpeg);
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 4;
+  grid-area: 1 / 7 / 7 / 11;
+  z-index: 1;
+}
+
+#projects #project-third:hover {
+  z-index: 3;
+}
+
+#projects #project-fourth {
+  background-image: url(../images/web_gallery_tokyokawaiiguide.jpeg);
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 6;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 4;
+  grid-area: 3 / 4 / 9 / 8;
+  z-index: 0;
+}
+
+#projects #project-fourth:hover {
+  z-index: 3;
+}
+
+#projects #project-fifth {
+  background-image: url(../images/web_gallery_ikiraku-yoga.jpeg);
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 6;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 3;
+  grid-area: 4 / 9 / 10 / 12;
+  z-index: 2;
+}
+
+#projects #project-fifth:hover {
+  z-index: 3;
+}
+
+footer {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #333;
+  text-align: center;
+  background-color: #333;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 4vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.5;
+  margin-top: 200px;
+}
+
+footer #dhu-info-container {
+  color: white;
+  width: 40vw;
+  margin-top: 50px;
+}
+
+footer #dhu-info-container .dhuLogo {
+  fill: #FF823F;
+  margin-bottom: 40px;
+}
+
+footer #dhu-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1rem;
+  margin-top: 30px;
+}
+
+footer #dhu-address svg {
+  fill: #FF823F;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+footer #dhu-address p {
+  text-align: left;
+}
+
+footer #dhu-contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+footer #dhu-contact-container #dhu-contact li {
+  margin-top: 15px;
+}
+
+footer #dhu-contact-container #dhu-contact li:first-child:before {
+  content: "";
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  margin-top: 5px;
+  background: url(../images/square-phone-solid.png) no-repeat top right;
+}
+
+footer #dhu-contact-container #dhu-contact li:last-child:before {
+  content: "";
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  margin-top: 5px;
+  background: url(../images/square-envelope-solid.png) no-repeat top right;
+}
+
+footer #dhu-contact-container #dhu-opening {
+  font-size: 1rem;
+  margin-top: 25px;
+  text-align: left;
+}
+
+footer #footer-line {
+  border-left: 3px solid #888;
+  height: 600px;
+}
+
+footer #footer-nav {
+  width: 35vw;
+  margin-top: 80px;
+}
+
+footer #footer-nav ul {
+  font-size: 1rem;
+  text-align: left;
+}
+
+footer #footer-nav li {
+  margin-top: 30px;
+}
+
+footer #footer-nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer #footer-nav li a:hover {
+  color: #FF823F;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

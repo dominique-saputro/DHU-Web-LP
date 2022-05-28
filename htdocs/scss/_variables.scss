@@ -1,0 +1,66 @@
+$primary-color: #333;
+$secondary-color: #888;
+$accent-color: #FF823F;
+
+@mixin text-40 {
+    font-size: 2rem;
+    margin-top: 150px;
+    color: $primary-color;
+    text-align: center;
+}
+
+@mixin text-30 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: $primary-color;
+    text-align: center;
+}
+
+@mixin text-25 {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    color: $primary-color;
+    text-align: center;
+}
+
+@mixin text-16 {
+    font-size: 0.8rem;
+    margin-top: 20px;
+    color: $primary-color;
+}
+
+@mixin drop-shadow {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+@mixin rounded-corners{
+    border-radius: 25px;
+}
+
+@mixin background-set {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin onHover{
+    cursor: pointer;
+    animation-name: hoverAnim;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@mixin onMouseOut{
+    animation-name: mouse-outAnim;
+    animation-duration: 0.5s;
+}
+
+@keyframes hoverAnim {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+@keyframes mouse-outAnim {
+    from { transform: scale(1.1); }
+    to { transform: scale(1); }
+}
