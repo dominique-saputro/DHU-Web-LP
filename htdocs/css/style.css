@@ -42,6 +42,141 @@
   }
 }
 
+@keyframes hoverAnim {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes mouse-outAnim {
+  from {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#prev-arrow {
+  cursor: pointer;
+  position: relative;
+  left: -5vw;
+  top: -40.6vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation-name: mouse-outAnim;
+          animation-name: mouse-outAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  background-image: url("../images/arrow_circle_left.png");
+  height: 2.5vw;
+  width: 2.5vw;
+}
+
+#prev-arrow:hover {
+  cursor: pointer;
+  -webkit-animation-name: hoverAnim;
+          animation-name: hoverAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#next-arrow {
+  cursor: pointer;
+  position: relative;
+  left: 72.4vw;
+  top: -45vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation-name: mouse-outAnim;
+          animation-name: mouse-outAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  background-image: url("../images/arrow_circle_right.png");
+  height: 2.5vw;
+  width: 2.5vw;
+}
+
+#next-arrow:hover {
+  cursor: pointer;
+  -webkit-animation-name: hoverAnim;
+          animation-name: hoverAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.dots {
+  text-align: center;
+}
+
+.dots .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 1.5vw;
+  background-color: #888;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.dots .dot:hover {
+  background-color: #FF823F;
+}
+
+.active {
+  background-color: #FF823F;
+}
+
+.slider {
+  margin-left: 15vw;
+  width: 100vw;
+  position: relative;
+}
+
+.slides {
+  display: none;
+}
+
 @media only screen and (max-width: 800px) {
   header h1 {
     text-align: left;
@@ -360,20 +495,15 @@ main p {
 }
 
 #personal .personal-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: white;
-  width: 80vw;
-  height: 80vh;
-  margin-left: 10vw;
-  margin-top: 70px;
   -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
+  width: 70vw;
+  height: 75vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 70px;
 }
 
 #personal .personal-container .image-container {
@@ -382,6 +512,7 @@ main p {
   background-size: cover;
   border-radius: 25px 0 0 25px;
   width: 40vw;
+  height: 100%;
 }
 
 #personal .personal-container .text-container {
@@ -389,6 +520,7 @@ main p {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 40vw;
+  height: 100%;
 }
 
 #personal #personal-first .image-container {

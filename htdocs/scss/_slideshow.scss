@@ -1,0 +1,88 @@
+@import '_variables.scss';
+
+.fade
+{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4;}
+    to { opacity: 1;}
+}
+
+#prev-arrow
+{
+    cursor: pointer;
+    position: relative;
+    left: -5vw;
+    top: -40.6vh;
+    @include background-set();
+    @include onMouseOut();
+    background-image: url("../images/arrow_circle_left.png");
+    height: 2.5vw;
+    width: 2.5vw;
+
+    &:hover
+    {
+        @include onHover;
+    }
+    
+}
+
+#next-arrow
+{
+    cursor: pointer;
+    position: relative;
+    left: 72.4vw;
+    top: -45vh;
+    @include background-set();
+    @include onMouseOut();
+    background-image: url("../images/arrow_circle_right.png");
+    height: 2.5vw;
+    width: 2.5vw;
+
+    &:hover
+    {
+        @include onHover;
+    }
+}
+
+.dots
+{
+    text-align: center;
+
+    .dot
+    {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 1.5vw;
+        background-color: $secondary-color;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+
+        &:hover
+        {
+            background-color: $accent-color;
+        }
+    }
+}
+
+.active
+{
+    background-color: $accent-color;
+}
+
+.slider
+{
+    margin-left: 15vw;
+    width: 100vw;
+    position: relative;
+}
+
+.slides
+{
+    display: none;
+}
