@@ -1,0 +1,51 @@
+@import "_variables.scss";
+
+.hide-area{
+	display: none;
+}
+
+/*全て共通：モーダルのボタンの色を変更したい場合*/
+.modaal-close:after, 
+.modaal-close:before{
+	background:$secondary-color;	
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before{
+	background:$accent-color;
+}
+
+.modaal-container
+{
+    @include rounded-corners();
+}
+
+.modaal-content-container
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 50px 150px;
+    text-align: center;
+
+    img
+    {
+        height: auto;
+        width: 500px;
+        @include drop-shadow();
+    }
+
+    h5
+    {
+        @include text-25();
+        margin-top: 30px;
+    }
+
+    p
+    {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: left;
+
+    }
+}

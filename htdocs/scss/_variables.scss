@@ -55,6 +55,20 @@ $accent-color: #FF823F;
     animation-duration: 0.5s;
 }
 
+@mixin fadeOut {
+    animation-name: opacityAnim;
+    animation-duration: 0.3s;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+}
+
+@mixin fadeIn {
+    animation-name: opacityAnim;
+    animation-duration: 0.3s;
+    animation-direction: forwards;
+    animation-fill-mode: forwards;
+}
+
 @keyframes hoverAnim {
     from { transform: scale(1); }
     to { transform: scale(1.1); }
@@ -63,4 +77,9 @@ $accent-color: #FF823F;
 @keyframes mouse-outAnim {
     from { transform: scale(1.1); }
     to { transform: scale(1); }
+}
+
+@keyframes opacityAnim {
+    from { opacity: 0;}
+    to { opacity: 1;}
 }

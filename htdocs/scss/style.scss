@@ -1,12 +1,16 @@
 @import '_variables.scss';
 @import '_slideshow.scss';
-@import '_responsive.scss';
+@import '_projects.scss';
 
 html
 {
     overflow-x: hidden;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $primary-color;
+    scroll-behavior: smooth;
+    width: 100vw;
+    height: 100%;
     
     ::-webkit-scrollbar{
         display: none;
@@ -16,6 +20,7 @@ html
 header
 {
     height: 100vh;
+    width: 100vw;
     padding: 3vw;
     box-sizing: border-box;
 
@@ -26,6 +31,7 @@ header
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        background-attachment: fixed;
         position: absolute;
         top: 0px;
         left: 0px;
@@ -44,7 +50,7 @@ header
         color: white;
         font-size: 2rem;
         text-align: right;
-        margin-top: 330px;
+        margin-top: 35vh;
     }
 
     h2
@@ -68,10 +74,50 @@ header
 
     .scroll
     {
-        font-size: 0.8rem;
-        margin-top: 8vh;
+        font-size: 0.6rem;
         text-align: center;
-        width: 90vw;
+        width: 100%;
+        box-sizing: border-box;
+        padding: auto;
+
+        span
+        {
+            position: relative;
+            left: 17.5px;
+            top: 40px;
+        }
+
+        &::after{
+            content: "";
+            /*描画位置*/
+            position: absolute;
+            top: 95vh;
+            /*線の形状*/
+            width: 1px;
+            height: 30px;
+            background: #eee;
+            /*線の動き1.4秒かけて動く。永遠にループ*/
+            animation: pathmove 1.4s ease-in-out infinite;
+            opacity:0;
+        }
+        
+        /*高さ・位置・透過が変化して線が上から下に動く*/
+        @keyframes pathmove{
+            0%{
+                height:0;
+                top:95vh;
+                opacity: 0;
+            }
+            30%{
+                height:30px;
+                opacity: 1;
+            }
+            100%{
+                height:0;
+                top:100vh;
+                opacity: 0;
+            }
+        }
     }
 }
 
@@ -184,7 +230,6 @@ main
         height: 100vh;
         @include background-set();
         @include drop-shadow();
-        background-image: url(../images/web_designer.jpeg);
     }
 
     .text-container
@@ -234,13 +279,7 @@ main
         justify-content: space-evenly;
         padding: 0 7.5vw;
         box-sizing: border-box;
-        margin-top: 70px;
-
-        img
-        {
-            width: 90%;
-            height: 100%;
-        }
+        margin-top: 40px;
 
         #merit-first
         {
@@ -291,6 +330,42 @@ main
             @include onHover();
         }
         }
+
+        .merit-badge
+        {
+            margin-top: 30px;
+            width: 430px;
+            height: 387px;
+
+            img
+            {
+                width: 90%;
+                height: 100%;
+                @include fadeIn();
+            }
+
+            .text-container
+            {
+                @include rounded-corners();
+                @include drop-shadow();
+                width: 380px;
+                height: 367px;
+                padding: 80px 40px;
+                margin-right: 50px;
+                box-sizing: border-box;
+                background-color: $primary-color;
+                color: white;
+                position: relative;
+                top: -387px;
+
+                h5
+                {
+                    color: white;
+                    text-decoration: none;
+
+                }
+            }
+        }
     }
 }
 
@@ -303,7 +378,7 @@ main
         width: 70vw;
         height: 75vh;
         display: flex;
-        margin-top: 70px;
+        margin-top: 30px;
 
         .image-container
         {
@@ -356,12 +431,18 @@ main
         justify-content: space-evenly;
     }
 
+    .slides
+    {
+        margin-right: 0;
+    }
+
     .teacher
     {
         @include drop-shadow();
         width: 25vw;
-        height: 90vh;
+        height: auto;
         text-align: center;
+        display: block;
 
         img
         {
@@ -373,6 +454,21 @@ main
             padding: 3vh 5vw;
             box-sizing: border-box;
         }
+    }
+
+    #prev-arrow-teacher
+    {
+        display: none;
+    }
+
+    #next-arrow-teacher
+    {
+        display: none;
+    }
+
+    .dots-teacher
+    {
+        display: none;
     }
 }
 
@@ -589,5 +685,17 @@ footer
 
         }
     }
-
 }
+
+#copyright
+{
+    font-size: 16px;
+    text-align: center;
+    background-color: $secondary-color;
+    width: 100vw;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    color: white;   
+}
+
+@import '_responsive.scss';

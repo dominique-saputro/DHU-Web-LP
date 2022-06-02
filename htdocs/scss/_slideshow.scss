@@ -11,12 +11,13 @@
     to { opacity: 1;}
 }
 
-#prev-arrow
+.prev-arrow
 {
     cursor: pointer;
     position: relative;
-    left: -5vw;
-    top: -40.6vh;
+    left: 5vw;
+    top: 47vh;
+    z-index: 2;
     @include background-set();
     @include onMouseOut();
     background-image: url("../images/arrow_circle_left.png");
@@ -30,12 +31,13 @@
     
 }
 
-#next-arrow
+.next-arrow
 {
     cursor: pointer;
     position: relative;
-    left: 72.4vw;
-    top: -45vh;
+    left: 90vw;
+    top: 43vh;
+    z-index: 2;
     @include background-set();
     @include onMouseOut();
     background-image: url("../images/arrow_circle_right.png");
@@ -51,6 +53,7 @@
 .dots
 {
     text-align: center;
+    margin-top: 30px;
 
     .dot
     {
@@ -67,22 +70,27 @@
         {
             background-color: $accent-color;
         }
-    }
-}
 
-.active
-{
-    background-color: $accent-color;
+        &.active
+        {
+            background-color: $accent-color;
+        }
+    }
 }
 
 .slider
 {
-    margin-left: 15vw;
-    width: 100vw;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .slides
 {
     display: none;
+
+    &.selected-personal
+    {
+        display: block;
+    }
 }

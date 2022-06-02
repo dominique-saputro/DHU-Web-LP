@@ -2,8 +2,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Digital Hollywood University Web LP</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,10 +29,9 @@
         <h1>The Future Can Be Taught</h1>
         <h2>Web業界をリードするための知識と技術を手に入れる</h2>
         <p>スマートフォンの普及、SNSの流行、ネットワークビジネスの拡大など、めざましい発展を続けるWeb業界。そこで求められる最先端の知識と技術を身につけられるのが、DHUの特長です。Webサイトの構築技法のみならず各種サービスの企画・運営についてまでを修得し業界の今、そしてこれからを活性化させる人材となることを目指します。</p>
-        <p class="scroll">scroll</p>
+        <p class="scroll"><span>scroll</span></p>
         <div class="kv"></div>
     </header>
-
     <main>
         <section id="courses">
             <h3>Courses</h3>
@@ -109,20 +110,41 @@
             <h3>Advantages of Studying Web</h3>
             <h4>Webを学ぶメリット</h4>
             <div class="merit-container">
-                <div id="merit-first">
+                <div class="merit-badge" id="merit-first">
                     <img src="images/merit_demand.png" alt="Demand">
+                    <div class="text-container">
+                        <h5>驚異的な需要</h5>
+                        <p>Web開発者の需要は増え続けています。企業は常に良いWeb開発者やデザイナー
+                            を探しており、需要は将来的に成長する予定です。</p>
+                    </div>
                 </div>
-                <div id="merit-second">
+                <div class="merit-badge" id="merit-second">
                     <img src="images/merit_flexible.png" alt="Flexible Time">
+                    <div class="text-container">
+                        <h5>仕事の柔軟性</h5>
+                        <p>フリーランスとして、パートタイム、フルタイム、企業、政府、自分のために、自宅から、あるいはバハマでの休暇中に働くことができます！</p>
+                    </div>
                 </div>
-                <div id="merit-third">
+                <div class="merit-badge" id="merit-third">
                     <img src="images/merit_payment.png" alt="Payment">
+                    <div class="text-container">
+                        <h5>給料がいい</h5>
+                        <p>数時間の作業で高額な報酬が得られることも多く、非常にやりがいのある仕事であり、キャリアの選択肢として非常に人気があります。</p>
+                    </div>
                 </div>
-                <div id="merit-fourth">
+                <div class="merit-badge" id="merit-fourth">
                     <img src="images/merit_qualification.png" alt="Qualification">
+                    <div class="text-container">
+                        <h5>資格</h5>
+                        <p>ウェブ開発者になるには、必ずしも高度なコンピュータサイエンスの学位が必要なわけではない。知識とポートフォリオに基づいて採用される。</p>
+                    </div>
                 </div>
-                <div id="merit-fifth">
+                <div class="merit-badge" id="merit-fifth">
                     <img src="images/merit_creativity.png" alt="Creativity">
+                    <div class="text-container">
+                        <h5>クリエイティブ</h5>
+                        <p>ウェブデザインは、コンピュータを使って美しく機能的なものを作ることができるため、クリエイティブなタイプの人には最適です。</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -130,8 +152,10 @@
         <section id="personal">
             <h3>Personal Opinion About Courses</h3>
             <h4>WEBデザイン・WEB開発の授業の感想</h4>
+            <div class="prev-arrow" id="prev-arrow-personal"></div>
+            <div class="next-arrow" id="next-arrow-personal"></div>
             <div class="slider">
-                <div class="fade">
+                <div class="slides slides-personal fade selected-personal">
                     <div class="personal-container" id="personal-first">
                         <div class="image-container"></div>
                         <div class="text-container">
@@ -141,7 +165,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slides fade">
+                <div class="slides slides-personal fade">
                     <div class="personal-container"  id="personal-second">
                         <div class="image-container"></div>
                         <div class="text-container">
@@ -151,7 +175,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slides fade">
+                <div class="slides slides-personal fade">
                     <div class="personal-container" id="personal-third">
                         <div class="image-container" ></div>
                         <div class="text-container">
@@ -161,13 +185,11 @@
                         </div>
                     </div>
                 </div>
-                <div id="prev-arrow"></div>
-                <div id="next-arrow"></div>
             </div>
             <div class="dots">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot dot-personal active"></span>
+                <span class="dot dot-personal"></span>
+                <span class="dot dot-personal"></span>
             </div>
         </section>
 
@@ -175,40 +197,78 @@
             <h3>Lecturers Introduction</h3>
             <h4>教員紹介</h4>
             <div id="teacher-container">
-                <div class="teacher">
+                <div class="prev-arrow" id="prev-arrow-teacher"></div>
+                <div class="teacher slides slides-teacher selected-teacher">
                     <img src="images/teacher_kuriya.jpeg" alt="Teacher Kuriya">
                     <div class="text-container">
                         <h5>栗谷 幸助｜准教授</h5>
                         <p>Webデザイン業界への夢先案内人</p>
                     </div>
                 </div>
-                <div class="teacher">
+                <div class="teacher slides slides-teacher">
                     <img src="images/teacher_komatsu.jpeg" alt="Teacher Komatsu">
                     <div class="text-container">
                         <h5>小松 学史｜准教授</h5>
                         <p>WebサイトフロントエンドエンジニアAdobe Flash認定インストラクター</p>
                     </div>
                 </div>
-                <div class="teacher">
+                <div class="teacher slides slides-teacher">
                     <img src="images/teacher_yuki_nakamura.jpeg" alt="Teacher Nakamura">
                     <div class="text-container">
                         <h5>中村 勇希｜非常勤講師</h5>
                         <p>「技術であそぶ」がコンセプト。デザイナー出身のフロントエンドエンジニア</p>
                     </div>
                 </div>
+                <div class="next-arrow" id="next-arrow-teacher"></div>
+            </div>
+            <div class="dots-teacher">
+                <span class="dot dot-teacher active"></span>
+                <span class="dot dot-teacher"></span>
+                <span class="dot dot-teacher"></span>
             </div>
         </section>
 
         <section id="projects">
             <h3>Graduation Projects</h3>
             <h4>卒業生の紹介</h4>
-            <div class="project-grid">
-                <div class="project-container" id="project-first"></div>
-                <div class="project-container" id="project-second"></div>
-                <div class="project-container" id="project-third"></div>
-                <div class="project-container" id="project-fourth"></div>
-                <div class="project-container" id="project-fifth"></div>
+            <div class="project-grid info-list">
+                <a class="project-container info" id="project-first" href="#project-1"></a>
+                <a class="project-container info" id="project-second" href="#project-2"></a>
+                <a class="project-container info" id="project-third" href="#project-3"></a>
+                <a class="project-container info" id="project-fourth" href="#project-4"></a>
+                <a class="project-container info" id="project-fifth" href="#project-5"></a>
             </div>
+
+            <section id="project-1" class="hide-area">
+                <img src="images/web_gallery_dementia.jpeg" alt="">
+                <h5>認知症について知って行動しよう｜ 柿野 幸歩</h5>
+                <p>認知症という、若い世代へ伝えるという難しいテーマに対して、デザインを通して丁寧にわかりやすく可視化を行った作品。</p>
+            </section>
+
+            <section id="project-2" class="hide-area">
+                <img src="images/web_gallery_focammina.jpeg" alt="">
+                <h5>FOCAMMINA｜ 宮﨑 ひなた</h5>
+                <p>本場イタリアの本格フォカッチャを楽しめるテイクアウト専門店。</p>
+            </section>
+
+            <section id="project-3" class="hide-area">
+                <img src="images/web_gallery_allertech.jpeg" alt="">
+                <h5>allertech｜田近 実理</h5>
+                <p>「食べたいを、さがそう」をコンセプトに、食物アレルギーの悩みをデジタルの力で解決するサービス企画。</p>
+            </section>
+
+            <section id="project-4" class="hide-area">
+                <img src="images/web_gallery_tokyokawaiiguide.jpeg" alt="">
+                <h5>Tokyo Kawaii Guide｜浅田 将寿、真田 静波、永光 彩、乔 毅鹏、小林 知佳</h5>
+                <p>ガイドブックには載っていない国内外女子向け東京観光ガイドサービス。</p>
+            </section>
+
+            <section id="project-5" class="hide-area">
+                <img src="images/web_gallery_ikiraku-yoga.jpeg" alt="">
+                <h5>生き楽ヨガ｜ 関本 真氣</h5>
+                <p>ヨガインストラクター資格を持つ作者による、「心」を整えるヨガの認知を若い世代に広めるためのWEBコンテンツ。</p>
+            </section>
+
         </section>
     </main>
 
@@ -241,8 +301,8 @@
                         <svg height="30px" width="25px" viewBox="0 0 384 512">
                             <path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/>
                         </svg>
-                        <p>〒101-0062 Tokyo, Chiyoda City, Kanda <br>
-                            Surugadai, 4 Chome−6 <br>
+                        <p>〒101-0062 Tokyo, Chiyoda City, Kanda 
+                            Surugadai, 4 Chome−6
                             御茶ノ水ソラシティアカデミア 3F/4F</p>
                     </div>
                 </li>
@@ -277,9 +337,14 @@
         </div>
     </footer>
 
+    <p id="copyright">Copyright &copy; 2022 A19DC535 Dominique Saputro. All Rights Reserved</p>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="resources/slick/slick.js"></script>
-    <script src="js/slideshow.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+    <script src="js/personal.js"></script>
+    <script src="js/teacher.js"></script>
+    <script src="js/merit.js"></script>
+    <script src="js/projects.js"></script>
     
 </body>
 </html>

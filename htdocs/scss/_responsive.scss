@@ -1,10 +1,856 @@
-@media only screen and (max-width: 800px)
+@media screen and (max-width: 1250px)
 {
     header
     {
         h1
         {
+            margin-top: 35vh;
+        }
+
+        p
+        {
+            width: 55vw;
+        }
+
+        .scroll
+        {
+           span
+           {
+               top: 1vh;
+           }
+        }
+    }
+
+    #compare
+    {
+        .text-container
+        {
+            padding: 15vh 80px;
+        }
+    }
+
+    #personal
+    {
+        .personal-container
+        {
+            .text-container
+            {
+                padding: 15vh 60px;
+            }
+        }
+    }
+
+    footer
+    {
+        font-size: 1rem;
+
+        #dhu-info-container
+        {
+            #dhu-contact-container
+            {
+                #dhu-opening
+                {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        #footer-nav
+        {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 1050px){
+    html
+    {
+        font-size: 18px;
+    }
+
+    header
+    {
+        p
+        {
+            width: 60vw;
+        }
+        .scroll
+        {
+           span
+           {
+               top: 1vh;
+           }
+        }
+    }
+
+    #courses
+    {
+        .text-container
+        {
+            width: 500px;
+            height: 320px;
+            padding: 70px 50px;
+        }
+
+        #course-first
+        {
+            .text-container
+            {
+                left: 35vw;
+            }
+        }
+
+        #course-second
+        {
+            .text-container
+            {
+                left: 20vw;
+            }
+        }
+
+        #course-third
+        {
+            .text-container
+            {
+                left: 25vw;
+            }
+        }
+    }
+
+    #compare
+    {
+        .text-container
+        {
+            padding: 15vh 50px;
+        }
+    }
+
+    #personal
+    {
+        .personal-container
+        {
+            .text-container
+            {
+                padding: 10vh 50px;
+            }
+        }
+    }
+
+    #teachers
+    {
+        .teacher
+        {
+            height: 600px;
+            .text-container
+            {
+                padding: 5vh 30px;
+            }
+        }
+    }
+
+    footer
+    {
+        .dhuLogo
+        {
+            width: 300px;
+        }
+
+        #dhu-contact-container
+        {
+            justify-content: space-between;
+
+            #dhu-contact
+            {
+                li
+                {
+                    margin-top: 15px;
+
+                    &:first-child:before
+                    {
+                        width: 30px;
+                        height:30px;
+                        margin-right: 10x;
+                        background-size: cover;
+                    }
+
+                    &:last-child:before
+                    {
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 10px;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+
+        #footer-nav
+        {
+            width: 30vw;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    html
+    {
+        font-size: 16px;
+    }
+
+    header
+    {
+        .kv
+        {
+            background-size: cover;
+        }
+
+        .dhuLogo
+        {
+            width: 30%;
+            height: auto;
+            margin-left: 35vw;
+        }
+
+        h1
+        {
+            text-align: center;
+            margin-top: 50vh;
+        }
+
+        h2
+        {
+            text-align: center;
+            width: 80%;
+            margin: 30px auto;
+        }
+        
+        p
+        {
+            width: 80%;
             text-align: left;
+            margin: 0px auto;
+            float: none;
+        }
+
+        .scroll
+        {
+            span
+            {
+                top: 5vh;
+                left: 15px;
+            }
+        }
+    }
+
+    #courses
+    {
+        .image-container
+        {
+            width: 100vw;
+            height: 500px;
+        }
+
+        #course-first, #course-second, #course-third
+        {
+            .image-container
+           {
+                left: 0;
+           }
+
+            .text-container
+            {
+                margin: 0px auto;
+                top: -200px;
+                left: 0;
+            }
+        }
+    }
+
+    #compare
+    {
+        .image-container
+        {
+            width: 100vw;
+            height: 50vh;
+        }
+
+        .text-container
+        {
+            width: 100vw;
+            height: 50vh;
+            padding: 5vh 10vw;
+
+            p
+            {
+                margin-top: 30px;
+            }
+        }
+
+        #web-designer-container
+        {
+            flex-direction: column;
+        }
+
+        #web-programmer-container
+        {
+            flex-flow: column-reverse;
+            margin-top: 50px;
+        }
+    }
+
+    #merit
+    {
+       .merit-container
+       {
+           width: 100vw;
+           padding: 0px 30px;
+
+           .merit-badge
+           {
+               display: flex;
+               justify-content: space-evenly;
+               width: 100%;
+               height: 250px;
+               
+               img
+               {
+                   width: 200px;
+                   height: 200px;
+               }
+   
+               .text-container
+               {
+                   display: block;
+                   top: 0;
+                   background-color: white;
+                   box-shadow: none;
+                   color: $primary-color;
+                   height: 200px;
+                   width: 50vw;
+                   padding: 30px 40px;
+                   margin: 0;
+
+                   h5
+                   {
+                       color: $primary-color;
+                   }
+               }
+
+               &:nth-of-type(2n)
+               {
+                   flex-direction: row-reverse;
+               }
+           }
+       }
+
+        
+    }
+
+    #personal
+    {
+        .prev-arrow, .next-arrow
+        {
+            display: none;
+        }
+
+        .slider
+        {
+            margin-left: 0;
+        }
+
+        .personal-container
+        {
+            width: 100vw;
+            border-radius: 0%;
+
+            .image-container
+            {
+                display: none;
+            }
+
+            .text-container
+            {
+                width: 70vw;
+                height: 60vh;
+                @include drop-shadow();
+                @include rounded-corners();
+                background-color: rgba(51, 51, 51, 0.75);
+                color: white;
+                margin: auto;
+
+                h5
+                {
+                    color: white;
+                }
+            }
+        }
+
+        #personal-first
+        {
+            @include background-set();
+            background-image: url(../images/classes_prototyping.jpeg);
+        }
+
+        #personal-second
+        {
+            @include background-set();
+            background-image: url(../images/classes_development.jpeg);
+        }
+
+        #personal-third
+        {
+            @include background-set();
+            background-image: url(../images/classes_seminar.jpeg);
+        }
+    }
+
+    #teachers
+    {
+        #teacher-container
+        {
+            flex-wrap: nowrap;
+            width: 100vw;
+        }
+
+        #prev-arrow-teacher
+        {
+            display: block;
+            position: inline;
+            left: 0;
+            top: 30.5vh;
+            height: 4vw;
+            width: 4vw;
+        }
+
+        #next-arrow-teacher
+        {
+            display: block;
+            position: inline;
+            left: 0;
+            top: 30vh;
+            height: 4vw;
+            width: 4vw;
+        }
+
+        .slides
+        {
+            margin-right: 0;
+        }
+
+        .teacher
+        {
+            display: none;
+            width: 50vw;
+            height: 700px;
+
+            img
+            {
+                width: 100%;
+                height: auto;
+            }
+
+            &.selected-teacher
+            {
+                display: block;
+            }
+        }
+
+        .dots-teacher
+        {
+            text-align: center;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+
+            .dot
+            {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 1.5vw;
+                background-color: $secondary-color;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.3s ease;
+        
+                &:hover
+                {
+                    background-color: $accent-color;
+                }
+        
+                &.active
+                {
+                    background-color: $accent-color;
+                }
+            }
+        }
+    }
+
+    #projects
+    {
+        .project-grid
+        {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            height: auto;
+        }
+
+        .project-container
+        {
+            width: 100vw;
+            height: 50vh;
+            background-size: contain;
+        }
+    }
+
+    .modaal-container
+        {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+    .modaal-content-container
+     {
+        padding: 30px 80px;
+        box-sizing: border-box;
+
+        img
+        {
+            width: 300px;
+        }
+    }
+
+    footer
+    {
+        font-size: 1rem;
+        padding: 3vw;
+        justify-content: center;
+
+        #dhu-info-container
+        {
+            width: 40vw;
+            margin-top: 30px;
+
+            .dhuLogo
+            {
+                width: 30vw;
+            }
+
+        }
+
+        #dhu-contact-container
+        {
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 15px;
+
+            #dhu-contact
+            {
+                li
+                {
+                    margin-top: 10px;
+                    padding: 0 60px;
+
+                    &:first-child:before
+                    {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 5px;
+                        margin-top: 5px;
+                        background-size: cover;
+                    }
+
+                    &:last-child:before
+                    {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 5px;
+                        margin-top: 5px;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            #dhu-opening
+            {
+               margin: 20px auto;
+               text-align: center;
+            }
+        }
+
+        #footer-line
+        {
+            height: 550px;
+            margin: 0 30px;
+        }
+
+        #footer-nav
+        {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) 
+{
+    header
+    {
+        h1
+        {
+            text-align: center;
+            margin-top: 25vh;
+        }
+
+        h2
+        {
+            text-align: center;
+            width: 80%;
+            margin: 30px auto;
+        }
+        
+        p
+        {
+            width: 80%;
+            text-align: left;
+            margin: 0px auto;
+            float: none;
+        }
+        .scroll
+        {
+            span
+            {
+                top: 2vh;
+                left: 15px;
+            }
+        }
+    }
+
+    main
+    {
+        h3,h4
+        {
+            padding: 0 25px;
+            line-height: 1.5;
+        }
+    }
+
+    #courses
+    {
+        .text-container
+        {
+            width: 100vw;
+        }
+    }
+
+    #compare
+    {
+        .text-container
+        {
+            height: auto;
+        }
+    }
+
+    #merit
+    {
+        .merit-container
+        {
+            .merit-badge
+            {
+                flex-direction: column;
+                height: auto;
+                width: 80vw;
+                align-items: center;
+
+                &:nth-of-type(2n)
+                {
+                    flex-direction: column;
+                }
+
+                .text-container
+                {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #personal
+    {
+        .personal-container
+        {
+            height: auto;
+
+            .text-container
+            {
+                margin: 20px;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    #teachers
+    {
+        .teacher
+        {
+            height: auto;
+            width: 70vw;
+
+            .text-container
+            {
+                height: auto;
+            }
+        }
+
+        #prev-arrow-teacher, #next-arrow-teacher
+        {
+            height: 28px;
+            width: 28px;
+        }
+    }
+
+    .modaal-inner-wrapper
+    {
+        padding: 0;
+    }
+
+    .modaal-content-container
+    {
+        padding: 30px;
+    }
+
+    footer
+    {
+        flex-direction: column;
+        align-items: center;
+
+        #dhu-info-container
+        {
+            width: 80vw;
+
+            .dhuLogo
+            {
+                width: 70%;
+            }
+
+            #dhu-address
+            {
+                svg
+                {
+                    width: 40px;
+                    height: 18px;
+                }
+            }
+
+            #dhu-contact-container
+            {
+                #dhu-contact
+                {
+                    padding: 0 30px;
+                }
+            }
+        }
+
+        #footer-line
+        {
+            width: 90vw;
+            height: 3px;
+            border-left: 0;
+            border-top: 3px solid $secondary-color;
+            margin-top: 30px;
+        }
+
+        #footer-nav
+        {
+            width: 80vw;
+            margin-top: 30px;
+            padding-bottom: 50px;
+            
+            li
+            {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) 
+{
+    #courses
+    {
+        .text-container
+        {
+            height: auto;
+        }
+    }
+    
+    #merit
+    {
+        .merit-container
+        {
+            height: auto;
+
+            .merit-badge
+            {
+                margin-top: 30px;
+
+                .text-container
+                {
+                    height: auto;
+                }
+            }
+        }
+        
+    }
+
+    #projects
+    {
+        .project-grid
+        {
+            .project-container
+            {
+                height: 300px;
+            }
+        }
+    }
+
+    .modaal-content-container
+    {
+        padding: 30px;
+        box-sizing: border-box;
+        width: 100vw;
+
+        img
+        {
+            width: 80vw;
+        }
+    }
+
+    footer
+    {
+        margin-top: 150px;
+
+        #dhu-info-container
+        {
+            #dhu-contact-container
+            {
+                #dhu-contact
+                {
+                    li
+                    {
+                        padding: 0 0px;
+                    }
+                }
+            }
+        }
+
+        #footer-nav
+        {
+            padding-bottom: 50px;
         }
     }
 }
